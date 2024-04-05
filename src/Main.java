@@ -1,4 +1,5 @@
 import br.com.individual_learn.screenmatch.models.Movie;
+import br.com.individual_learn.screenmatch.models.Serie;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +14,14 @@ public class Main {
 
         System.out.println("The total number of avaliations: " + myMovie.getTotalAvaliations());
         System.out.println("Mean: " + myMovie.getMean());
+
+
+        Serie serie = new Serie();
+
+        serie.setName("lost in the paradise");
+        serie.setLaunchingYear(2000);
+        serie.setTimeInMinutes(140);
+        serie.exhibitDescription();
+
     }
 }
