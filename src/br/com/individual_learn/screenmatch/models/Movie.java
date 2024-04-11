@@ -1,6 +1,8 @@
 package br.com.individual_learn.screenmatch.models;
 
-public class Movie extends Title {
+import br.com.individual_learn.screenmatch.calculator.Classification;
+
+public class Movie extends Title implements Classification {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Movie extends Title {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getClassification() {
+        return (int)getMean() / 2;
     }
 }

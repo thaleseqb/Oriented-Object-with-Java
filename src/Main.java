@@ -1,6 +1,10 @@
+import br.com.individual_learn.screenmatch.calculator.RecomendationsFilter;
 import br.com.individual_learn.screenmatch.calculator.TimeCalculator;
+import br.com.individual_learn.screenmatch.models.Episode;
 import br.com.individual_learn.screenmatch.models.Movie;
 import br.com.individual_learn.screenmatch.models.Serie;
+
+import java.rmi.Remote;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,5 +40,15 @@ public class Main {
         calculator.insert(serie);
 
         System.out.println(calculator.getTotalTime());
+
+        RecomendationsFilter filter = new RecomendationsFilter();
+        filter.filter(myMovie);
+
+        Episode episode = new Episode();
+        episode.setNumberEpisode(1);
+        episode.setSerie(serie);
+        episode.setTotalViews(300);
+
+        filter.filter(episode);
     }
 }
