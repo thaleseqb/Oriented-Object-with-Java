@@ -37,4 +37,9 @@ public class Serie extends Title{
     public void setEpisodeMinutes(int episodeMinutes) {
         this.episodeMinutes = episodeMinutes;
     }
+
+    @Override
+    public int getTimeInMinutes() {
+        return seasons*episodeMinutes*seansonEpsiodes;
+    }
 }
