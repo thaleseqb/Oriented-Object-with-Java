@@ -5,6 +5,7 @@ import br.com.individual_learn.screenmatch.models.Serie;
 import br.com.individual_learn.screenmatch.models.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainLists {
     public static void main(String[] args) {
@@ -27,5 +28,20 @@ public class MainLists {
                 System.out.println("The classification is: " + movie.getClassification());
             }
         }
+
+        ArrayList<String> trackArtist = new ArrayList<>();
+        trackArtist.add("Adam Sandler");
+        trackArtist.add("Andre");
+        trackArtist.add("Milton");
+        trackArtist.add("Cecília");
+
+        System.out.println(trackArtist);
+//        this method sorts the array
+        Collections.sort(trackArtist);
+
+        System.out.println(trackArtist);
+
+        Collections.sort(list);
+        System.out.println(list);
     }
 }

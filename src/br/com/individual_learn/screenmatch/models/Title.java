@@ -1,6 +1,6 @@
 package br.com.individual_learn.screenmatch.models;
 
-public class Title {
+public class Title implements Comparable<Title>{
     private String name;
     private int launchingYear;
     private boolean isIncluded;
@@ -63,5 +63,10 @@ public class Title {
 
     public double getMean() {
         return avaliationSum / totalAvaliations;
+    }
+
+    @Override
+    public int compareTo(Title otherTitle) {
+        return this.getName().compareTo(otherTitle.getName());
     }
 }

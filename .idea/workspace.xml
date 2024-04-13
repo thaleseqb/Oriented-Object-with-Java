@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac534a05-e71f-4105-a90a-c7cf3101da3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/main/MainLists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Serie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/main/MainLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/main/MainLists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Title.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
