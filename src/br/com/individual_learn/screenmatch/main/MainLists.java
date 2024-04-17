@@ -4,8 +4,7 @@ import br.com.individual_learn.screenmatch.models.Movie;
 import br.com.individual_learn.screenmatch.models.Serie;
 import br.com.individual_learn.screenmatch.models.Title;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class MainLists {
     public static void main(String[] args) {
@@ -29,7 +28,7 @@ public class MainLists {
             }
         }
 
-        ArrayList<String> trackArtist = new ArrayList<>();
+        List<String> trackArtist = new LinkedList<>();
         trackArtist.add("Adam Sandler");
         trackArtist.add("Andre");
         trackArtist.add("Milton");
@@ -42,6 +41,9 @@ public class MainLists {
         System.out.println(trackArtist);
 
         Collections.sort(list);
+        System.out.println(list);
+
+        list.sort(Comparator.comparing(Title::getLaunchingYear));
         System.out.println(list);
     }
 }
