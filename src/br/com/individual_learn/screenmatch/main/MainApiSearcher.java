@@ -1,7 +1,10 @@
 package br.com.individual_learn.screenmatch.main;
 
+import br.com.individual_learn.screenmatch.models.OMDBTitle;
 import br.com.individual_learn.screenmatch.models.Title;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.net.URI;
@@ -21,18 +24,34 @@ public class MainApiSearcher {
 
         String address = "http://www.omdbapi.com/?t=" + movieName + "&apikey=70066399";
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(address))
-                .build();
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(address))
+                    .build();
 
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
-        String json = response.body();
-        System.out.println(json);
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+            String json = response.body();
+            System.out.println(json);
 
-        Gson gson = new Gson();
-        Title title = gson.fromJson(json, Title.class);
-        System.out.println(title);
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(
+                            FieldNamingPolicy.UPPER_CAMEL_CASE
+                    ).create();
+            OMDBTitle omdbtitle = gson.fromJson(json, OMDBTitle.class);
+
+            Title title = new Title(omdbtitle);
+            System.out.println("omdb title " + omdbtitle);
+            System.out.println("my title " + title);
+
+        } catch (NumberFormatException exception) {
+            System.out.println("An error occurred");
+            System.out.println(exception.getMessage());
+        } catch (IllegalArgumentException exception) {
+            System.out.println("An argument error occurred while searching for the movie");
+        }
+        
+        System.out.println("program finished correctly");
     }
 }
