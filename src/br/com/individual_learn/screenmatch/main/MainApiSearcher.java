@@ -2,6 +2,7 @@ package br.com.individual_learn.screenmatch.main;
 
 import br.com.individual_learn.screenmatch.models.OMDBTitle;
 import br.com.individual_learn.screenmatch.models.Title;
+import br.com.individual_learn.screenmatch.my_exceptions.ParsingErrorException;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -22,7 +23,8 @@ public class MainApiSearcher {
         String movieName = scan.nextLine();
         System.out.println("the movie name chosen was: " + movieName);
 
-        String address = "http://www.omdbapi.com/?t=" + movieName + "&apikey=70066399";
+        String address = "http://www.omdbapi.com/?t=" + movieName.replace(" ", "+")
+                + "&apikey=70066399";
 
         try {
             HttpClient client = HttpClient.newHttpClient();
@@ -50,8 +52,10 @@ public class MainApiSearcher {
             System.out.println(exception.getMessage());
         } catch (IllegalArgumentException exception) {
             System.out.println("An argument error occurred while searching for the movie");
+        } catch (ParsingErrorException exception) {
+            System.out.println(exception.getMessage());
         }
-        
+
         System.out.println("program finished correctly");
     }
 }

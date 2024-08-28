@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac534a05-e71f-4105-a90a-c7cf3101da3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/OMDBTitle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/my_exceptions/ParsingErrorException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/main/MainApiSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/main/MainApiSearcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/individual_learn/screenmatch/models/Title.java" afterDir="false" />
@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,6 +50,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.individual_learn.screenmatch.my_exceptions" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.MainApiSearcher">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.individual_learn.screenmatch.main.Main" />

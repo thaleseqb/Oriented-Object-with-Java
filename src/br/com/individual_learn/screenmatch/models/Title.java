@@ -1,11 +1,10 @@
 package br.com.individual_learn.screenmatch.models;
 
+import br.com.individual_learn.screenmatch.my_exceptions.ParsingErrorException;
 import com.google.gson.annotations.SerializedName;
 
 public class Title implements Comparable<Title>{
-    @SerializedName("Title")
     private String name;
-    @SerializedName("Year")
     private int launchingYear;
     private boolean isIncluded;
     private double avaliationSum;
@@ -19,6 +18,11 @@ public class Title implements Comparable<Title>{
 
     public Title(OMDBTitle omdbtitle) {
         name = omdbtitle.title();
+
+        if (omdbtitle.year().length() > 4) {
+            throw new ParsingErrorException("Movie launching year conversion failed");
+        }
+
         launchingYear = Integer.valueOf(omdbtitle.year());
         timeInMinutes = Integer.valueOf(omdbtitle.runtime().substring(0, 2));
     }
